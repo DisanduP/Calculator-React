@@ -1,53 +1,151 @@
-# Getting Started with Create React App
+# 🌟 Glassmorph Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A stunning **glassmorphism-styled calculator** built with React and Sass, featuring smooth 3D tilt animations and a beautiful translucent design.
 
-## Available Scripts
+![Calculator Preview](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Sass](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-In the project directory, you can run:
+## ✨ Features
+
+- 🎨 **Glassmorphism Design** - Modern translucent UI with backdrop blur effects
+- 🎭 **3D Tilt Animation** - Interactive hover effects using Vanilla Tilt
+- ⚡ **React Hooks** - Modern React with useState and useEffect
+- 🎯 **Sass/SCSS** - Organized styling with variables and mixins
+- 📱 **Responsive Design** - Works beautifully on all screen sizes
+- 🔢 **Full Calculator** - Complete arithmetic operations
+- 🎪 **Gradient Backgrounds** - Animated gradient orbs for visual appeal
+- ⚙️ **Modern Architecture** - Clean component structure and event handling
+
+## 🚀 Demo
+
+Experience the calculator live: [View Demo](https://your-demo-link.com)
+
+## 🛠️ Built With
+
+- **React** - Frontend framework
+- **Sass/SCSS** - Advanced CSS preprocessing
+- **Vanilla Tilt** - 3D tilt hover effects
+- **CSS Grid** - Layout system for button arrangement
+- **Glassmorphism** - Modern UI design trend
+
+## 📦 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/DisanduP/Calculator-React.git
+   cd Calculator-React
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 🎯 Usage
+
+- **Numbers & Operations**: Click any number or operation button
+- **Clear**: Press 'C' to clear the display
+- **Calculate**: Press '=' to evaluate the expression
+- **Tilt Effect**: Hover over the calculator to see the 3D tilt animation
+
+## 🏗️ Project Structure
+
+```
+src/
+├── Calculator.js       # Main calculator component
+├── Calculator.scss     # Glassmorphism styles
+├── App.js             # Root component
+├── App.css            # App-level styles
+└── index.js           # Entry point
+```
+
+## 🎨 Styling Features
+
+- **Glass Effect**: `backdrop-filter: blur()` with transparency
+- **Gradient Orbs**: Animated background elements
+- **Hover States**: Smooth transitions and interactive feedback
+- **Typography**: Clean Quicksand font family
+- **Color Scheme**: Dark theme with vibrant accents
+
+## 🔧 Customization
+
+### Modify Colors
+Edit the Sass variables in `Calculator.scss`:
+```scss
+$primary-bg: #091921;
+$glass-bg: rgba(255, 255, 255, 0.05);
+$active-bg: #14ff47;
+```
+
+### Adjust Size
+Change the calculator dimensions:
+```scss
+$button-size: 95px;
+$calculator-width: 380px;
+```
+
+### Tilt Settings
+Modify the tilt effect in `Calculator.js`:
+```javascript
+VanillaTilt.init(containerRef.current, {
+  max: 15,           // Max tilt rotation
+  speed: 400,        // Speed of animation
+  glare: true,       // Enable glare effect
+  "max-glare": 0.2   // Glare intensity
+});
+```
+
+## 📱 Available Scripts
 
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Runs the app in development mode at [http://localhost:3000](http://localhost:3000)
 
 ### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode
 
 ### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Builds the app for production with optimized performance
 
 ### `npm run eject`
+⚠️ **One-way operation** - Ejects from Create React App
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🤝 Contributing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📄 License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Learn More
+## 🙏 Acknowledgments
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Glassmorphism** design inspiration
+- **Vanilla Tilt** for the amazing 3D effects
+- **React** team for the incredible framework
+- **Sass** for powerful CSS preprocessing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📧 Contact
 
-### Code Splitting
+**Disandu** - [@DisanduP](https://github.com/DisanduP)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Project Link: [https://github.com/DisanduP/Calculator-React](https://github.com/DisanduP/Calculator-React)
+
+---
+
+⭐ **Star this repo if you found it helpful!** ⭐
 
 ### Analyzing the Bundle Size
 
