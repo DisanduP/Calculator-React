@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap");
+
+// Variables
+$primary-bg: #091921;
+$glass-bg: rgba(255, 255, 255, 0.05);
+$glass-border: rgba(255, 255, 255, 0.2);
+$glass-shadow: rgba(0, 0, 0, 0.2);
+$text-color: #fff;
+$hover-bg: rgba(255, 255, 255, 0.05);
+$active-bg: #14ff47;
+$active-text: #192f00;
+$border-color: rgba(255, 255, 255, 0.05);
+$button-size: 95px;
+$calculator-width: 380px;
+
+// Mixins
+@mixin glassEffect {
+  background: $glass-bg;
+  border-top: 1px solid $glass-border;
+  border-left: 1px solid $glass-border;
+  box-shadow: 5px 5px 30px $glass-shadow;
+}
+
+@mixin buttonBase {
+  display: grid;
+  place-items: center;
+  width: $button-size;
+  height: $button-size;
+  color: $text-color;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 24px;
+  user-select: none;
+  border-bottom: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+// Global styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  background: $primary-bg;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#e91e63, #ffc107);
+    clip-path: circle(22% at 30% 20%);
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#ffffff, #da00ff);
+    clip-path: circle(20% at 70% 90%);
+  }
+}
+
+// Calculator styles
+.container {
+  position: relative;
+  @include glassEffect;
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 10;
+  width: $calculator-width;
+  
+  .calculator {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, $button-size);
+    width: $calculator-width;
+    
+    .value {
+      grid-column: span 4;
+      height: 180px;
+      width: $calculator-width;
+      text-align: right;
+      border: none;
+      outline: none;
+      padding: 20px;
+      font-size: 36px;
+      background: transparent;
+      color: $text-color;
+      border-bottom: 1px solid $border-color;
+      border-right: 1px solid $border-color;
+      resize: none;
+      font-family: "Quicksand", sans-serif;
+    }
+    
+    .num {
+      @include buttonBase;
+      
+      &.clear {
+        grid-column: span 2;
+        width: calc(#{$button-size} * 2);
+        background: $hover-bg;
+      }
+      
+      &.plus {
+        grid-row: span 2;
+        height: calc(#{$button-size} * 2);
+      }
+      
+      &.equal {
+        background: $hover-bg;
+      }
+      
+      &:hover {
+        background: $hover-bg;
+      }
+      
+      &:active {
+        background: $active-bg;
+        color: $active-text;
+        font-size: 28px;
+        font-weight: 500;
+      }
+    }
+  }
+}
